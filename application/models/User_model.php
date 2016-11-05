@@ -25,6 +25,7 @@
       } else {
         $alecu = $this->load->database('alecu', TRUE);
         $alecu->select('count(*) AS num')
+              ->from('usuario', 'id_user = '.$id_usuario );
         $query = $alecu->get();
         if ($query->row('num') == 1) {
           return TRUE;
