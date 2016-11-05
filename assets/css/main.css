@@ -1,0 +1,87 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+}
+
+.fullScreen {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-top: 70px;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+/*
+* PARA EL MENU
+*/
+header {
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  background: #8BC34A;
+}
+
+header nav ul {
+  margin: 0;
+  height: 100%;
+  color: #f7f7f7;
+  text-align: center;
+  font-weight: bold;
+}
+
+header nav ul li {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  top: 1.5em;
+}
+
+header nav ul li:first-child {
+  float: left;
+  top: -0.0em;
+}
+
+header nav ul li a:hover {
+  color: #000;
+}
+
+nav a:link, nav a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+header #logo img{
+  background-color: transparent;
+  width: 64px;
+}
+/*
+* TERMINA EL MENU
+*/
+
+.slider_container {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #000;
+}
+
+.slider_container .slideContainer {
+  white-space: nowrap;
+  height: 100%;
+}
+
+.slider_container .slideContainer .slide {
+  display: inline-block;
+  background-color: #fff;
+  margin-right: -4px;
+  vertical-align: top;
+  background-size: 100%;
+  background-position: bottom;
+}
