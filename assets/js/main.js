@@ -6,6 +6,10 @@ $(document).on('ready' ,function() {
       addBackground(e,width,true);
   });
   intv = setInterval(handleClick,10000);
+
+  $('a.smoothScroll').smoothScroll({
+    scrollTarget: $(this).val()
+  });
 });
 
 function addBackground(element,width,setSize){

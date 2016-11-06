@@ -13,10 +13,10 @@
         <nav>
           <ul>
             <li><div id="logo"><img src="<?= base_url("assets/image/logo_01.png"); ?>"  alt="logo alecu"></div></li>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#nosotros">NOSOTROS</a></li>
-            <li><a href="#areas">AREAS PROTEGIDAS</a></li>
-            <li><a href="#contactenos ">CONTACTENOS</a></li>
+            <li><a href="#inicio" class="smoothScroll" >INICIO</a></li>
+            <li><a href="#nosotros" class="smoothScroll" >NOSOTROS</a></li>
+            <li><a href="#areas" class="smoothScroll" >AREAS PROTEGIDAS</a></li>
+            <li><a href="#contactenos" class="smoothScroll" >CONTACTENOS</a></li>
           </ul>
         </nav>
     </header>
@@ -175,6 +175,7 @@
       </div>
     </div>
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
+    <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
     <script src="<?= base_url("assets/js/main.js")?>"></script>
   </body>
 </html>
