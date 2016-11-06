@@ -144,6 +144,7 @@ header #logo img{
   display: block;
   position: relative;
   padding: 2em;
+  text-align: center;
 }
 
 .box {
@@ -180,6 +181,10 @@ header #logo img{
 
 #contactenos {
   background-image: url('../image/wallhaven-440428.jpg');
+}
+
+textarea {
+  resize: none;
 }
 
 /* RESPONSIVE */

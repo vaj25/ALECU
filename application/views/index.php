@@ -5,6 +5,7 @@
     <title>ALECU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
     <link rel="shortcut icon" href="<?= base_url("assets/image/logo_01.jpg")?>" />
+    <link href=<?= base_url("vendor/twbs/bootstrap/dist/css/bootstrap.min.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/main.css")?> rel="stylesheet" media="screen">
   </head>
   <body>
@@ -99,9 +100,80 @@
       </div>
     </div>
     <div class="fullScreen" id="contactenos">
+      <div class="column">
+        <div class="column-a">
+          <?php
+            $atributos = array(
+              'class' => 'form-horizontal contact-form',
+              'role' => 'form'
+            );
 
+            $atriLabel = array('class' => 'col-lg-2 control-label', 'style' => 'text-shadow: 1px 1px #000; color: #fff');
+
+            $button = array('class' => 'btn btn-success', 'style' => 'float: right;');
+
+            $nom = array(
+                'name' => 'nombre',
+                'placeholder' => 'Escribe Nombre',
+                'class' => "form-control"
+            );
+
+            $email = array(
+                'name' => 'email',
+                'placeholder' => 'Escriba su Email',
+                'class' => "form-control"
+            );
+
+            $asunto = array(
+                'name' => 'asunto',
+                'placeholder' => 'Escriba el Asunto',
+                'class' => "form-control"
+            );
+
+            $mensaje = array(
+              'name'        => 'msj',
+              'placeholder' => 'Escriba el Mensaje',
+              'class'       => 'form-control'
+            );
+
+            echo form_open("/", $atributos);
+            echo "<div class='form-group'>";
+              echo form_label('Nombre:', 'nom', $atriLabel);
+              echo "<div class='col-lg-10'>";
+                echo form_input($nom);
+              echo "</div>";
+            echo "</div>";
+
+            echo "<div class='form-group'>";
+              echo form_label('Email:', 'em', $atriLabel);
+              echo "<div class='col-lg-10'>";
+                echo form_input($email);
+              echo "</div>";
+            echo "</div>";
+
+            echo "<div class='form-group'>";
+              echo form_label('Asunto:', 'asu', $atriLabel);
+              echo "<div class='col-lg-10'>";
+                echo form_input($asunto);
+              echo "</div>";
+            echo "</div>";
+
+            echo "<div class='form-group'>";
+              echo form_label('Mensaje:', 'men', $atriLabel);
+              echo "<div class='col-lg-10'>";
+                echo form_textarea($mensaje);
+              echo "</div>";
+            echo "</div>";
+
+            echo form_submit('','Enviar', $button);
+            echo form_close();
+          ?>
+        </div>
+        <div class="column-b">
+          facebook
+        </div>
+      </div>
     </div>
-
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
     <script src="<?= base_url("assets/js/main.js")?>"></script>
   </body>
