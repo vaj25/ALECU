@@ -21,6 +21,14 @@ html, body {
   background-attachment: fixed;
 }
 
+.largeScreen {
+  width: 100%;
+  padding: 0;
+  padding-top: 70px;
+  margin: 0;
+  background-attachment: fixed;
+}
+
 /*
 * PARA EL MENU
 */
@@ -114,7 +122,63 @@ header #logo img{
   float: right;
 }
 
-#historia {
+.titulo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.sub-titulo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  width: 50%;
+  margin: 1.5em auto;
+}
+
+.content-box {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  display: block;
+  position: relative;
+  padding: 2em;
+}
+
+.box {
+  display: inline-block;
+  position: relative;
+  background-color: #fbfbfb;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 25em;
+  border: 1px solid #c8c8c8;
+}
+
+.box-title {
+  height: 4em;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid #FF6B01;
+  text-align: center;
+  vertical-align: 50%;
+}
+
+.box-content {
+  padding: 1em;
+  height: 15em;
+  text-align: center;
+}
+
+#nosotros {
+  background-image: url('../image/wallhaven-452628.jpg');
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+#contactenos {
   background-image: url('../image/wallhaven-440428.jpg');
 }
 

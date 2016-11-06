@@ -14,9 +14,8 @@
             <li><div id="logo"><img src="<?= base_url("assets/image/logo_01.png"); ?>"  alt="logo alecu"></div></li>
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#nosotros">NOSOTROS</a></li>
-            <li><a href="#historia">HISTORIA</a></li>
-            <li><a href="#">AREAS PROTEGIDAS</a></li>
-            <li><a href="#">CONTACTENOS</a></li>
+            <li><a href="#areas">AREAS PROTEGIDAS</a></li>
+            <li><a href="#contactenos ">CONTACTENOS</a></li>
           </ul>
         </nav>
     </header>
@@ -57,10 +56,49 @@
         </p>
       </div>
     </div>
-    <div class="fullScreen" id="historia">
-
+    <div class="largeScreen" id="areas">
+      <p class="titulo">
+        Areas Protegidas
+      </p>
+      <p class="sub-titulo">
+        Aquella que posee biodiversidad significativa o contiene rasgos naturales o culturales de valor relevante ...
+        ...y ha sido intervenida por el hombre en una forma mínima.
+        Que se ha establecido jurídicamente y es capaz de proveer beneficios y servicios  ambientales.
+      </p>
+      <div class="content-box">
+        <div class="box">
+          <div class="box-title">
+            Parque Nacional Montecristo
+          </div>
+          <div class="box-content">
+            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
+            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
+            Fue la primera área protegida declarada del país.
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-title">
+            Parque Nacional Montecristo
+          </div>
+          <div class="box-content">
+            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
+            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
+            Fue la primera área protegida declarada del país.
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-title">
+            Parque Nacional Montecristo
+          </div>
+          <div class="box-content">
+            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
+            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
+            Fue la primera área protegida declarada del país.
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="fullScreen">
+    <div class="fullScreen" id="contactenos">
 
     </div>
 
