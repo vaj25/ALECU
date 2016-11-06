@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
+}
+
 html, body {
   height: 100%;
   margin: 0px;
@@ -23,7 +30,7 @@ header {
   z-index: 1000;
   top: 0;
   width: 100%;
-  background: #8BC34A;
+  background: #77DD77;
 }
 
 header nav ul {
@@ -47,11 +54,11 @@ header nav ul li:first-child {
 }
 
 header nav ul li a:hover {
-  color: #000;
+  color: #999;
 }
 
 nav a:link, nav a:visited {
-  color: #fff;
+  color: #F5F5F5;
   text-decoration: none;
 }
 
@@ -63,13 +70,16 @@ header #logo img{
 * TERMINA EL MENU
 */
 
+/*
+* SLIDER
+*/
 .slider_container {
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
   z-index: -2;
-  background-color: #000;
+  background-color: #F5F5F5;
 }
 
 .slider_container .slideContainer {
@@ -84,4 +94,35 @@ header #logo img{
   vertical-align: top;
   background-size: 100%;
   background-position: bottom;
+}
+/*
+* TERMINA EL SLIDER
+*/
+
+.column {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
+  width: 45%;
+  padding: 1em;
+}
+
+.column-a {
+  float: left;
+}
+
+.column-b {
+  float: right;
+}
+
+#historia {
+  background-image: url('../image/wallhaven-440428.jpg');
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+  .column {
+
+    width: 80%;
+  }
 }
