@@ -1,0 +1,84 @@
+@font-face {
+	font-family: 'poster';
+	src:url('../fonts/mistrelposter.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.content {
+  position: absolute;
+  width: 27%;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #d4d4d4;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.content-login {
+  padding: 1.5em;
+  height: 20em;
+  background-color: #fbfbfb;
+}
+
+.content-login-title {
+  background-color: #93BF72;
+  padding: 0.2em 0.5em;
+  height: 6em;
+  text-align: center;
+  line-height: 5em;
+}
+
+.title-login {
+  font-family: 'poster';
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: #f2f2f2;
+}
+
+.content-login-footer {
+  background-color: #363E31;
+  padding: 0.2em 0.5em;
+  height: 6em;
+  text-align: center;
+  line-height: 5em;
+}
+
+.footer-login {
+  font-family: 'poster';
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: #f2f2f2;
+}
+
+.icono:before {
+  font-family: 'icomoon';
+  color: #f2f2f2;
+  font-size: 1.2em;
+}
+
+/* RESPONSIVE */
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    width: 40%;
+  }
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (max-width: 767px) {
+  .content {
+    width: 55%;
+  }
+}
+
+/* Móviles en vertical */
+@media (max-width: 480px) {
+  .content {
+    width: 100%;
+  }
+}

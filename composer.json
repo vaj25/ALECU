@@ -9,9 +9,11 @@
 		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
 		"irc": "irc://irc.freenode.net/codeigniter",
 		"source": "https://github.com/bcit-ci/CodeIgniter"
+
 	},
 	"require": {
-		"php": ">=5.2.4"
+		"php": ">=5.2.4",
+		"twbs/bootstrap": "^3.3"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
