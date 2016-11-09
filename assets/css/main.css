@@ -23,6 +23,8 @@ html, body {
 
 .largeScreen {
   width: 100%;
+  min-height: 100%;
+  overflow: hidden;
   padding: 0;
   padding-top: 70px;
   margin: 0;
@@ -191,7 +193,15 @@ textarea {
 
 @media (max-width: 767px) {
   .column {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    width: 80%;
+  .column-a, .column-b {
+    float: none;
+  }
+
+  .box {
+    width: 90%;
   }
 }

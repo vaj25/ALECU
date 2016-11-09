@@ -30,10 +30,15 @@
     <div class="fullScreen">
 
     </div>
-    <div class="fullScreen" id="nosotros">
+    <div class="largeScreen" id="nosotros">
       <div class="column-a column">
         <p>
           <b>Nosotros</b>
+        </p>
+        <p>
+          Todos los navegadores que he testado ignoran height:
+          100% en el elemento hijo y su altura es la altura de su contenido.
+          Aunque no es lo que yo quería, por lo menos es cross-browser.
         </p>
       </div>
       <div class="column-b column">
