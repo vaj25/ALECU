@@ -7,9 +7,13 @@
     <link rel="shortcut icon" href="<?= base_url("assets/image/logo_01.jpg")?>" />
     <link href=<?= base_url("vendor/twbs/bootstrap/dist/css/bootstrap.min.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/main.css")?> rel="stylesheet" media="screen">
+    <link href=<?= base_url("assets/css/iconos.css")?> rel="stylesheet" media="screen">
   </head>
   <body>
     <header>
+        <div class="menu_bar">
+          <a href="#" class="bt-menu"><span class="icon icon-list2"></span>Menu</a>
+        </div>
         <nav>
           <ul>
             <li><div id="logo"><img src="<?= base_url("assets/image/logo_01.png"); ?>"  alt="logo alecu"></div></li>

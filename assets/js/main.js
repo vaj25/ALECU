@@ -10,6 +10,13 @@ $(document).on('ready' ,function() {
   $('a.smoothScroll').smoothScroll({
     scrollTarget: $(this).val()
   });
+  // MENU RESPONSIVE
+  $(".menu_bar").click(function() {
+    $("header nav").slideToggle(500);
+    $("header nav li").click(function() {
+      $("header nav").slideUp(500);
+    });
+  });
 });
 
 function addBackground(element,width,setSize){

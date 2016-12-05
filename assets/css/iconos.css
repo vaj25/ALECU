@@ -9,6 +9,14 @@
 	font-style: normal;
 }
 
+.icon {
+	font-family: 'icomoon';
+}
+
 .icon-enter:before {
   content: "\ea13";
+}
+
+.icon-list2:before {
+	content: "\e9bd";
 }
