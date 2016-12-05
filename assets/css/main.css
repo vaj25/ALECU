@@ -2,7 +2,7 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
+
 }
 
 html, body {
@@ -90,6 +90,13 @@ header #logo img{
   left: 0;
   z-index: -2;
   background-color: #F5F5F5;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-top: 64px;
+  margin: 0;
+  background-attachment: fixed;
 }
 
 .slider_container .slideContainer {
@@ -118,10 +125,12 @@ header #logo img{
 
 .column-a {
   float: left;
+  margin: 0 auto;
 }
 
 .column-b {
   float: right;
+  margin: 0 auto;
 }
 
 .titulo {
@@ -190,8 +199,24 @@ textarea {
 }
 
 /* RESPONSIVE */
+@media screen and (min-width: 1400px) {
+  .fullScreen, .largeScreen {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
 
-@media (max-width: 767px) {
+  header {
+    transform: scale(1.2);
+  }
+
+  header nav ul li:first-child {
+    float: left;
+    left: 10%;
+    top: 0.25em;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .column {
     width: 90%;
     margin: 0 auto;

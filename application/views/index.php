@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>ALECU</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?= base_url("assets/image/logo_01.jpg")?>" />
     <link href=<?= base_url("vendor/twbs/bootstrap/dist/css/bootstrap.min.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/main.css")?> rel="stylesheet" media="screen">
@@ -20,7 +20,7 @@
           </ul>
         </nav>
     </header>
-    <div class="fullScreen slider_container" id="inicio">
+    <div class="slider_container" id="inicio">
       <div class="slideContainer">
         <div class="slide fullScreen" data-background="<?= base_url("assets/image/DSC02097")?>"></div>
         <div class="slide fullScreen" data-background="<?= base_url("assets/image/DSC02173")?>"></div>
@@ -105,8 +105,8 @@
       </div>
     </div>
     <div class="fullScreen" id="contactenos">
-      <div class="column">
-        <div class="column-a">
+      <div>
+        <div class="column-a column">
           <?php
             $atributos = array(
               'class' => 'form-horizontal contact-form',
@@ -174,7 +174,7 @@
             echo form_close();
           ?>
         </div>
-        <div class="column-b">
+        <div class="column-b column">
           facebook
         </div>
       </div>
