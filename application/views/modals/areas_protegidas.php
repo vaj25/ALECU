@@ -32,11 +32,11 @@
             <fieldset form="Ingresar_Area" name="IngresarArea">
             <legend>Ingresar Nueva Area</legend>
             <?php echo $idareas; ?>
-            <p><label>Nombre:</label> <input type="text" name="nombre" value="<?php echo $nombre; ?>" ></p>
-            <p><label>Descripcion:</label><br><textarea name="descripcion" cols="50" rows="5"><?php echo $descripcion; ?></textarea></p>
-            <p><label>Extension:</label><input type="text" name="extension" value="<?php echo $extension; ?>" ></p>
-            <p><label>Ubicacion:</label> <input type="text" name="ubicacion" value="<?php echo $ubicacion; ?>" ></p>
-            <p><input type="submit" name="guardar" value="Guardar" /></p>
+            <p><label>Nombre:</label> <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>" ></p>
+            <p><label>Descripcion:</label><br><textarea name="descripcion" class="form-control" cols="50" rows="5"><?php echo $descripcion; ?></textarea></p>
+            <p><label>Extension:</label><input type="text" name="extension" class="form-control" value="<?php echo $extension; ?>" ></p>
+            <p><label>Ubicacion:</label> <input type="text" name="ubicacion" class="form-control" value="<?php echo $ubicacion; ?>" ></p>
+            <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
             </fieldset>
           </form>
         </div>

@@ -101,15 +101,17 @@
             <a href="<?php echo base_url(); ?>index.php/areas/eliminar/<?php echo $area->idareas; ?>">eliminar</a>
           </div>
           <?php endforeach; ?>
-          <?php else :?>
-              <h2>No hay registros</h2>
-          <?php endif; ?>
+        <?php else :?>
+            <h2>No hay registros</h2>
+        <?php endif; ?>
         <div class="box">
           <div class="box-title">
             NUEVO
           </div>
-          <div class="box-content">
-            <p id="nuevo_anp" class="plus open-Modal" data-toggle="modal" data-target="#anp-modal">+</p>
+          <div class="box-content" style="margin-bottom: -8em; margin-top: 9.5em;">
+            <p id="nuevo_anp" class="plus open-Modal" data-toggle="modal" data-target="#anp-modal">
+              <img src="<?= base_url("assets/image/plus-icon.png"); ?>" alt="" height="150px">
+            </p>
           </div>
         </div>
       </div>
