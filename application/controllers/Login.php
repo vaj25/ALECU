@@ -26,7 +26,7 @@ class Login extends CI_Controller {
     } else {
        if ($this->session->userdata('logged_in')) {
          $user = $this->session->userdata('logged_in');
-         redirect('Welcome'.'/');
+         redirect('Edit'.'/');
        }
     }
 

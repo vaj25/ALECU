@@ -1,0 +1,7 @@
+.plus {
+  font-size: 10em;
+}
+
+.plus:hover {
+  cursor: pointer;
+}
