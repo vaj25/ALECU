@@ -135,6 +135,7 @@ a:link, a:visited {
   margin-right: -4px;
   vertical-align: top;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: bottom;
 }
 /*
@@ -231,13 +232,7 @@ textarea {
   }
 
   header {
-    transform: scale(1.2);
-  }
-
-  header nav ul li:first-child {
-    float: left;
-    left: 10%;
-    top: 0.25em;
+    font-size: 1.2em;
   }
 }
 
