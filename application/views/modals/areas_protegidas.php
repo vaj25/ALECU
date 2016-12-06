@@ -15,6 +15,7 @@
     $ubicacion = '';
     $extension = '';
     $accion = 'insertar';
+    $script = "";
   }
 ?>
 <?= $script?>
