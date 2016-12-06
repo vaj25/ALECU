@@ -9,6 +9,11 @@
     <link href=<?= base_url("assets/css/main.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/edit.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/iconos.css")?> rel="stylesheet" media="screen">
+    <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
+    <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
+    <script src="<?= base_url("vendor/twbs/bootstrap/dist/js/bootstrap.min.js")?>"></script>
+    <script src="<?= base_url("assets/js/edit.js")?>"></script>
+    <script src="<?= base_url("assets/js/main.js")?>"></script>
   </head>
   <body>
     <header>
@@ -77,36 +82,28 @@
         Que se ha establecido jurídicamente y es capaz de proveer beneficios y servicios  ambientales.
       </p>
       <div class="content-box">
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
+        <?php if (count($areas) > 0 ): ?>
+          <?php foreach($areas as $area) : ?>
+          <div class="box">
+            <div class="box-title">
+              <?php echo $area->nombre; ?>
+            </div>
+            <div class="box-content">
+              <?php echo $area->descripcion;
+              echo "<br><br>";
+              echo $area->ubicacion;
+              echo "<br> extension: ";
+              echo $area->extension;
+              echo "<br>"?>
+            </div>
+            <a href="<?php echo base_url(); ?>index.php/areas/index/<?php echo $area->idareas; ?>">modificar</a>
+            <?php echo "|";?>
+            <a href="<?php echo base_url(); ?>index.php/areas/eliminar/<?php echo $area->idareas; ?>">eliminar</a>
           </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
-          </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
-          </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
+          <?php endforeach; ?>
+          <?php else :?>
+              <h2>No hay registros</h2>
+          <?php endif; ?>
         <div class="box">
           <div class="box-title">
             NUEVO
@@ -192,11 +189,6 @@
         </div>
       </div>
     </div>
-    <?= $this->load->view('modals/areas_protegidas','',TRUE) ?>
-    <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
-    <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
-    <script src="<?= base_url("vendor/twbs/bootstrap/dist/js/bootstrap.min.js")?>"></script>
-    <script src="<?= base_url("assets/js/edit.js")?>"></script>
-    <script src="<?= base_url("assets/js/main.js")?>"></script>
+    <?= $this->load->view('modals/areas_protegidas', (isset($areas_actualizar)) ? [$areas_actualizar] : "",TRUE) ?>
   </body>
 </html>

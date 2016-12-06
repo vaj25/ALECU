@@ -1,5 +1,7 @@
 .plus {
-  font-size: 10em;
+  position: relative;
+  font-size: 14.25em;
+  top: -0.2em;
 }
 
 .plus:hover {
