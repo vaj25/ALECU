@@ -19,6 +19,51 @@
       }
     }
 
+    public function actualiza_nosotros($nos){
+
+  		if( $this->db->update('miscelanea', $nos))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
+    public function actualiza_objetivo($obj){
+
+  		if( $this->db->update('miscelanea', $obj))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
+    public function actualiza_cita($cit){
+
+  		if( $this->db->update('miscelanea', $cit))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
+    public function actualiza_autor($aut){
+
+  		if( $this->db->update('miscelanea', $aut))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
+    public function actualiza_areas($are){
+
+  		if( $this->db->update('miscelanea', $are))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
    /* public function insertarUnidad($data){
 
         $this->nombre = $data['nombre'];
