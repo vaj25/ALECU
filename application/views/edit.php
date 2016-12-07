@@ -52,6 +52,29 @@
         <p>
             <?=$datos->nosotros?>
         </p>
+        <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#nosotrosModal">
+      Editar
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="nosotrosModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Nosotros</h4>
+          </div>
+          <div class="modal-body">
+            <p><label>Nosotros:</label><br><textarea name="Nosotros" class="form-control" cols="50" rows="5"><?=$datos->nosotros?></textarea></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
       </div>
       <div class="column-b column">
         <p>
