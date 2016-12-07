@@ -2,6 +2,11 @@
 
 class Areas extends CI_Controller{
 
+	public function __construct() {
+    parent::__construct();
+    $this->load->model('Miscelanea_model');
+  }
+
 	public function insertar(){
 
 		$areas = array(
@@ -40,7 +45,7 @@ class Areas extends CI_Controller{
 	public function index(){
 		$this->load->model('areas_model');
 		$data['areas'] = $this->areas_model->leer_areas();
-
+		$data['info'] = $this->Miscelanea_model->obtenerDatos();
 		if( $this->uri->segment(3) != '' ){
 			$id = $this->uri->segment(3);
 			$data['areas_actualizar']	= $this->areas_model->traer_areas($id);
