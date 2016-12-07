@@ -20,8 +20,39 @@ class Edit extends CI_Controller {
 		$nos = array(
 			'nosotros' => $this->input->post('nosotros')
 			);
-		$this->load->model('Miscelanea_models');
 		if( $this->Miscelanea_model->actualiza_nosotros($nos) )
+			redirect('edit');
+	}
+
+  public function actualizarObjetivo(){
+		$obj = array(
+			'objetivo' => $this->input->post('objetivo')
+			);
+		if( $this->Miscelanea_model->actualiza_objetivo($obj) )
+			redirect('edit');
+	}
+
+  public function actualizarCita(){
+		$cit = array(
+			'cita' => $this->input->post('cita')
+			);
+		if( $this->Miscelanea_model->actualiza_cita($cit) )
+			redirect('edit');
+	}
+
+  public function actualizarAutor(){
+		$aut = array(
+			'autor' => $this->input->post('autor')
+			);
+		if( $this->Miscelanea_model->actualiza_autor($aut) )
+			redirect('edit');
+	}
+
+  public function actualizarArea(){
+		$are = array(
+			'areas' => $this->input->post('areas')
+			);
+		if( $this->Miscelanea_model->actualiza_areas($are) )
 			redirect('edit');
 	}
 }

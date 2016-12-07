@@ -53,32 +53,32 @@
             <?=$datos->nosotros?>
         </p>
         <!-- Button trigger modal -->
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#nosotrosModal">
-      Editar
-    </button>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#nosotrosModal">
+          Editar
+        </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="nosotrosModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Nosotros</h4>
-          </div>
-          <div class="modal-body">
-            <div class="contact-form" align="left">
-              <form name="Ingresar_nosotros" action="Edit/actualizarNosotros/" autocomplete="on" method="post">
-                <p><label>Nosotros:</label><br><textarea name="nosotros" class="form-control" cols="50" rows="5"><?=$datos->nosotros?></textarea></p>
-                <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="nosotrosModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Editar nosotros</h4>
+              </div>
+              <div class="modal-body">
+                <div class="contact-form" align="left">
+                  <form name="Ingresar_nosotros" action="Edit/actualizarNosotros/" autocomplete="on" method="post">
+                    <p><label>Nosotros:</label><br><textarea name="nosotros" class="form-control" cols="50" rows="5"><?=$datos->nosotros?></textarea></p>
+                    <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
       </div>
       <div class="column-b column">
         <p>
@@ -87,15 +87,96 @@
         <p>
           <?=$datos->objetivo?>
         </p>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#objetivoModal">
+          Editar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="objetivoModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Editar objetivo</h4>
+              </div>
+              <div class="modal-body">
+                <div class="contact-form" align="left">
+                  <form name="Ingresar_objetivo" action="Edit/actualizarObjetivo/" autocomplete="on" method="post">
+                    <p><label>Objetivo:</label><br><textarea name="objetivo" class="form-control" cols="50" rows="10"><?=$datos->objetivo?></textarea></p>
+                    <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
         <p>
           <b>Citas</b>
         </p>
         <p>
           <?=$datos->cita?>
         </p>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#citaModal">
+          Editar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="citaModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Editar cita</h4>
+              </div>
+              <div class="modal-body">
+                <div class="contact-form" align="left">
+                  <form name="Ingresar_cita" action="Edit/actualizarCita/" autocomplete="on" method="post">
+                    <p><label>Cita:</label><br><textarea name="cita" class="form-control" cols="50" rows="10"><?=$datos->cita?></textarea></p>
+                    <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
         <p>
-          Gandhi
+          <?=$datos->autor?>
         </p>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#autorModal">
+          Editar
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="autorModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Editar autor</h4>
+              </div>
+              <div class="modal-body">
+                <div class="contact-form" align="left">
+                  <form name="Ingresar_autor" action="Edit/actualizarAutor/" autocomplete="on" method="post">
+                    <p><label>Cita:</label><br><textarea name="autor" class="form-control" cols="50" rows="2"><?=$datos->autor?></textarea></p>
+                    <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
       </div>
     </div>
     <div class="largeScreen" id="areas">
@@ -105,6 +186,33 @@
       <p class="sub-titulo">
           <?=$datos->areas?>
       </p>
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#areasModal">
+        Editar
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="areasModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Editar concepto de areas protegidas</h4>
+            </div>
+            <div class="modal-body">
+              <div class="contact-form" align="left">
+                <form name="Ingresar_areas" action="Edit/actualizarArea/" autocomplete="on" method="post">
+                  <p><label>Cita:</label><br><textarea name="areas" class="form-control" cols="50" rows="10"><?=$datos->areas?></textarea></p>
+                  <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
       <?php
         }
       ?>
