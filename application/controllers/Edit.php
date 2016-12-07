@@ -15,6 +15,15 @@ class Edit extends CI_Controller {
     $data['info'] = $this->Miscelanea_model->obtenerDatos();
     $this->load->view('edit', $data);
   }
+
+  public function actualizarNosotros(){
+		$nos = array(
+			'nosotros' => $this->input->post('nosotros')
+			);
+		$this->load->model('Miscelanea_models');
+		if( $this->Miscelanea_model->actualiza_nosotros($nos) )
+			redirect('edit');
+	}
 }
 
 ?>

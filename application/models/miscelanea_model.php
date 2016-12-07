@@ -19,6 +19,15 @@
       }
     }
 
+    public function actualiza_nosotros($nos){
+
+  		if( $this->db->update('miscelanea', $nos))
+  			return true;
+  		else
+  			return false;
+
+  	}
+
    /* public function insertarUnidad($data){
 
         $this->nombre = $data['nombre'];

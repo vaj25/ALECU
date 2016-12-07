@@ -66,11 +66,15 @@
             <h4 class="modal-title">Nosotros</h4>
           </div>
           <div class="modal-body">
-            <p><label>Nosotros:</label><br><textarea name="Nosotros" class="form-control" cols="50" rows="5"><?=$datos->nosotros?></textarea></p>
+            <div class="contact-form" align="left">
+              <form name="Ingresar_nosotros" action="Edit/actualizarNosotros/" autocomplete="on" method="post">
+                <p><label>Nosotros:</label><br><textarea name="nosotros" class="form-control" cols="50" rows="5"><?=$datos->nosotros?></textarea></p>
+                <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+              </form>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
