@@ -79,36 +79,25 @@
         }
       ?>
       <div class="content-box">
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
+        <?php if (count($areas) > 0 ): ?>
+          <?php foreach($areas as $area) : ?>
+          <div class="box">
+            <div class="box-title">
+              <?php echo $area->nombre; ?>
+            </div>
+            <div class="box-content">
+              <?php echo $area->descripcion;
+              echo "<br><br>";
+              echo $area->ubicacion;
+              echo "<br> extension: ";
+              echo $area->extension;
+              echo "<br>"?>
+            </div>
           </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
-          </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-title">
-            Parque Nacional Montecristo
-          </div>
-          <div class="box-content">
-            Está ubicado en el municipio de Metapán, departamento de Santa Ana.
-            Tiene una extensión de 1973 hectáreas de bosque nebuloso y es parte de la Reserva de la biosfera Trifinio.
-            Fue la primera área protegida declarada del país.
-          </div>
-        </div>
+          <?php endforeach; ?>
+        <?php else :?>
+            <h2>No hay registros</h2>
+        <?php endif; ?>
       </div>
     </div>
     <div class="fullScreen" id="contactenos">

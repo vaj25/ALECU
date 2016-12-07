@@ -22,10 +22,12 @@ class Welcome extends CI_Controller {
      parent::__construct();
 
      $this->load->model('Miscelanea_model');
+		 $this->load->model('areas_model');
    }
 	public function index()
 	{
 		$data['info'] = $this->Miscelanea_model->obtenerDatos();
+		$data['areas'] = $this->areas_model->leer_areas();
 		$this->load->helper(array('form'));
 		$this->load->view('index',$data);
 	}

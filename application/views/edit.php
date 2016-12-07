@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>ALECU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?= base_url("assets/image/logo_01.jpg")?>" />
+    <?php
+      foreach($info as $datos)
+      {
+    ?>
+    <link rel="shortcut icon" href="<?= base_url("$datos->logo_jpg")?>" />
     <link href=<?= base_url("vendor/twbs/bootstrap/dist/css/bootstrap.min.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/main.css")?> rel="stylesheet" media="screen">
     <link href=<?= base_url("assets/css/edit.css")?> rel="stylesheet" media="screen">
@@ -22,7 +26,7 @@
         </div>
         <nav>
           <ul>
-            <li><div id="logo"><img src="<?= base_url("assets/image/logo_01.png"); ?>"  alt="logo alecu"></div></li>
+            <li><div id="logo"><img src="<?= base_url("$datos->logo_png"); ?>"  alt="logo alecu"></div></li>
             <li><a href="#inicio" class="smoothScroll" >INICIO</a></li>
             <li><a href="#nosotros" class="smoothScroll" >NOSOTROS</a></li>
             <li><a href="#areas" class="smoothScroll" >AREAS PROTEGIDAS</a></li>
@@ -32,9 +36,9 @@
     </header>
     <div class="slider_container" id="inicio">
       <div class="slideContainer">
-        <div class="slide fullScreen" data-background="<?= base_url("assets/image/DSC02097")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("assets/image/DSC02173")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("assets/image/DSC03117")?>"></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide1")?>"></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide2")?>"></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide3")?>"></div>
       </div>
     </div>
     <div class="fullScreen">
@@ -46,9 +50,7 @@
           <b>Nosotros</b>
         </p>
         <p>
-          Todos los navegadores que he testado ignoran height:
-          100% en el elemento hijo y su altura es la altura de su contenido.
-          Aunque no es lo que yo quería, por lo menos es cross-browser.
+            <?=$datos->nosotros?>
         </p>
       </div>
       <div class="column-b column">
@@ -56,16 +58,13 @@
           <b>Objetivo</b>
         </p>
         <p>
-          La Asociación Local Ecológica de Comunidades Unidas (ALECU), tiene como objetivo principal:
-          Proteger y conservar el medio ambiente y el aprovechamiento racional de los recursos naturales,
-          para garantizar prioritariamente el bienestar de las comunidades del municipio de Ciudad Arce.
-          Una de sus prioridades es la Recuperación y restauración del Área Natural Protegida San Andrés
+          <?=$datos->objetivo?>
         </p>
         <p>
           <b>Citas</b>
         </p>
         <p>
-          "Tú debes ser el cambio que deseas ver en el mundo"
+          <?=$datos->cita?>
         </p>
         <p>
           Gandhi
@@ -77,10 +76,11 @@
         Areas Protegidas
       </p>
       <p class="sub-titulo">
-        Aquella que posee biodiversidad significativa o contiene rasgos naturales o culturales de valor relevante ...
-        ...y ha sido intervenida por el hombre en una forma mínima.
-        Que se ha establecido jurídicamente y es capaz de proveer beneficios y servicios  ambientales.
+          <?=$datos->areas?>
       </p>
+      <?php
+        }
+      ?>
       <div class="content-box">
         <?php if (count($areas) > 0 ): ?>
           <?php foreach($areas as $area) : ?>
