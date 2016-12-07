@@ -106,7 +106,7 @@
           <?php
             $atributos = array(
               'class' => 'form-horizontal contact-form',
-              'role' => 'form'
+              'role' => 'form',
             );
 
             $atriLabel = array('class' => 'col-lg-2 control-label', 'style' => 'text-shadow: 1px 1px #000; color: #fff');
@@ -137,7 +137,7 @@
               'class'       => 'form-control'
             );
 
-            echo form_open("/", $atributos);
+            echo form_open("/Welcome/EnviarCorreo", $atributos);
             echo "<div class='form-group'>";
               echo form_label('Nombre:', 'nom', $atriLabel);
               echo "<div class='col-lg-10'>";

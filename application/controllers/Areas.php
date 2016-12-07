@@ -18,7 +18,7 @@ class Areas extends CI_Controller{
 
 		$this->load->model('areas_model');
 		if ( $this->areas_model->insertar_areas($areas) )
-			redirect('edit');
+			redirect('Edit');
 	}
 
 	public function actualizar(){
@@ -32,14 +32,14 @@ class Areas extends CI_Controller{
 
 		$this->load->model('areas_model');
 		if( $this->areas_model->actualiza_areas($id, $areas) )
-			redirect('edit');
+			redirect('Edit');
 	}
 
 	public function eliminar(){
 		$idareas = $this->uri->segment(3);
 		$this->load->model('areas_model');
 		if( $this->areas_model->eliminar_areas($idareas) )
-			redirect('edit');
+			redirect('Edit');
 	}
 
 	public function index(){
@@ -52,7 +52,7 @@ class Areas extends CI_Controller{
 		}
 
 		$this->load->helper(array('form'));
-		$this->load->view('edit',$data);
+		$this->load->view('Edit',$data);
 	}
 
 }
