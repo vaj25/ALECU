@@ -5,6 +5,9 @@ class Edit extends CI_Controller {
 
   public function __construct() {
     parent::__construct();
+    if($this->session->userdata('logged_in') == FALSE){
+      redirect('login/index/error_no_autenticar');
+    }
     $this->load->model('Miscelanea_model');
   }
 
@@ -55,6 +58,49 @@ class Edit extends CI_Controller {
 		if( $this->Miscelanea_model->actualiza_areas($are) )
 			redirect('edit');
 	}
+
+  public function actualizarSlide() {
+    $config['upload_path'] = "assets/image/";
+    $config['allowed_types'] = "jpg";
+    $config['max_size'] = "500000";
+
+    $this->load->library('upload', $config);
+
+    if (!$this->upload->do_upload('image')) {
+        //*** ocurrio un error
+        $data['uploadError'] = $this->upload->display_errors();
+        echo $this->upload->display_errors();
+        return;
+    } else {
+      $data = array('upload_data' => $this->upload->data());
+      $num = $this->input->post('numero');
+      $sld;
+      switch ($num) {
+        case 1:
+          $sld = array(
+            'slide1' => 'assets/image/' . $data['upload_data']['raw_name'],
+            'cita_slide1' => $this->input->post('cita'),
+          );
+          break;
+        case 2:
+          $sld = array(
+            'slide1' => 'assets/image/' . $data['upload_data']['raw_name'],
+            'cita_slide1' => $this->input->post('cita'),
+          );
+          break;
+        case 3:
+          $sld = array(
+            'slide1' => 'assets/image/' . $data['upload_data']['raw_name'],
+            'cita_slide1' => $this->input->post('cita'),
+          );
+          break;
+        default:
+          break;
+      }
+  		if( $this->Miscelanea_model->actualiza_slide($sld) )
+  		  redirect('edit');
+    }
+  }
 }
 
 ?>

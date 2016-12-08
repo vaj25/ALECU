@@ -36,14 +36,64 @@
     </header>
     <div class="slider_container" id="inicio">
       <div class="slideContainer">
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide1")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide2")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide3")?>"></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide1")?>"><div class="legend"><?= $datos->cita_slide1?></div></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide2")?>"><div class="legend"><?= $datos->cita_slide2?></div></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide3")?>"><div class="legend"><?= $datos->cita_slide3?></div></div>
       </div>
     </div>
     <div class="fullScreen">
-
+      <button style="position: relative; top: 80%;" class="edit btn btn-primary btn-lg" data-toggle="modal" data-target="#slidemodal">
+        Editar
+      </button>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="slidemodal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Editar Slide</h4>
+          </div>
+          <div class="modal-body">
+            <div class="contact-form" align="left">
+              <form name="Ingresar_nosotros" enctype='multipart/form-data' action="<?= base_url("index.php/Edit/actualizarSlide/"); ?>" autocomplete="on" method="post">
+                <p>
+                  <label><img src="<?= base_url("$datos->slide1")?>.jpg" width="100px" alt="" alt=""></label><br>
+                  <p><input type="file" name="image"></p>
+                  <label>Cita Imagen 1</label><br>
+                  <input type="text" class="form-control" name="cita" value="<?= $datos->cita_slide1; ?>" >
+                  <input type="hidden" name="numero" value="1" >
+                <p>
+                <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+              </form>
+              <form name="Ingresar_nosotros" action="<?= base_url("index.php/Edit/actualizarSlide/"); ?>" autocomplete="on" method="post">
+                <p>
+                  <label><img src="<?= base_url("$datos->slide2")?>.jpg" width="100px" alt=""></label><br>
+                  <p><input type="file" name="image"></p>
+                  <label>Cita Imagen 2</label><br>
+                  <input type="text" class="form-control" name="cita" value="<?= $datos->cita_slide2; ?>" >
+                  <input type="hidden" name="numero" value="1" >
+                <p>
+                <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+              </form>
+              <form name="Ingresar_nosotros" action="<?= base_url("index.php/Edit/actualizarSlide/"); ?>" autocomplete="on" method="post">
+                <p>
+                  <label><img src="<?= base_url("$datos->slide3")?>.jpg" width="100px" alt=""></label><br>
+                  <p><input type="file" name="image"></p>
+                  <label>Cita Imagen 3</label><br>
+                  <input type="text" class="form-control" name="cita" value="<?= $datos->cita_slide3; ?>" >
+                  <input type="hidden" name="numero" value="1" >
+                </p>
+                <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <div class="largeScreen" id="nosotros">
       <div class="column-a column">
         <p>
@@ -325,7 +375,23 @@
           ?>
         </div>
         <div class="column-b column">
-          facebook
+          <span class="social">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FONG-Ecologica-1837656946456922%2F&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <!-- iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FONG-Ecologica-1837656946456922%2F&width=280&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="280" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe -->
+          </span>
+          <span class="social">
+            <a class="twitter-timeline width: 20px"  href="https://twitter.com/hashtag/ONGalecu" data-widget-id="805589770218930176"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <a class="twitter-timeline" data-width="260" data-height="500" data-theme="dark" href="https://twitter.com/ONGalecu/likes">Tweets Liked by @TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </span>
         </div>
       </div>
     </div>

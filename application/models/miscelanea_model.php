@@ -64,6 +64,14 @@
 
   	}
 
+    public function actualiza_slide($slide){
+
+      if( $this->db->update('miscelanea', $slide))
+        return true;
+      else
+        return false;
+        
+    }
    /* public function insertarUnidad($data){
 
         $this->nombre = $data['nombre'];

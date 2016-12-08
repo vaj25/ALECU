@@ -36,6 +36,7 @@ if (isset($alert)) {
               $tipo = 'danger';
               break;
             default:
+            $mensaje = $alert;
               break;
           }
           break;

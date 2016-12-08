@@ -30,9 +30,9 @@
     </header>
     <div class="slider_container" id="inicio">
       <div class="slideContainer">
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide1")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide2")?>"></div>
-        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide3")?>"></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide1")?>"><div class="legend"><?= $datos->cita_slide1?></div></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide2")?>"><div class="legend"><?= $datos->cita_slide2?></div></div>
+        <div class="slide fullScreen" data-background="<?= base_url("$datos->slide3")?>"><div class="legend"><?= $datos->cita_slide3?></div></div>
       </div>
     </div>
     <div class="fullScreen">
@@ -100,7 +100,7 @@
         <?php endif; ?>
       </div>
     </div>
-    <div class="fullScreen" id="contactenos">
+    <div class="largeScreen" id="contactenos">
       <div>
         <div class="column-a column">
           <?php
@@ -171,7 +171,23 @@
           ?>
         </div>
         <div class="column-b column">
-          facebook
+          <span class="social">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FONG-Ecologica-1837656946456922%2F&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <!-- iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FONG-Ecologica-1837656946456922%2F&width=280&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="280" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe -->
+          </span>
+          <span class="social">
+            <a class="twitter-timeline width: 20px"  href="https://twitter.com/hashtag/ONGalecu" data-widget-id="805589770218930176"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <a class="twitter-timeline" data-width="260" data-height="500" data-theme="dark" href="https://twitter.com/ONGalecu/likes">Tweets Liked by @TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </span>
         </div>
       </div>
     </div>

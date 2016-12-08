@@ -224,6 +224,24 @@ textarea {
   resize: none;
 }
 
+.social {
+  margin: 0.5em auto;
+}
+
+.legend {
+  position: relative;
+  bottom: -75%;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 15em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+
 /* RESPONSIVE */
 @media screen and (min-width: 1400px) {
   .fullScreen, .largeScreen {
