@@ -11,3 +11,9 @@
   width: 90%;
   margin: 0 auto;
 }
+
+.edit {
+  position: relative;
+  left: 70%;
+  margin: 1em;
+}
