@@ -9,7 +9,7 @@
     }
 
     public function obtenerDatos(){
-      //$this->db->order_by("id_unidad_medida", "asc");
+      $this->db->where("estado", "activo");
       $query = $this->db->get('miscelanea');
       if ($query->num_rows() > 0) {
           return  $query->result();
@@ -21,7 +21,8 @@
 
     public function actualiza_nosotros($nos){
 
-  		if( $this->db->update('miscelanea', $nos))
+      $this->db->where('id_misc', $this->duplica_registro());
+  		if( $this->db->update('miscelanea', $nos) )
   			return true;
   		else
   			return false;
@@ -30,6 +31,7 @@
 
     public function actualiza_objetivo($obj){
 
+      $this->db->where('id_misc', $this->duplica_registro());
   		if( $this->db->update('miscelanea', $obj))
   			return true;
   		else
@@ -39,6 +41,7 @@
 
     public function actualiza_cita($cit){
 
+      $this->db->where('id_misc', $this->duplica_registro());
   		if( $this->db->update('miscelanea', $cit))
   			return true;
   		else
@@ -48,6 +51,7 @@
 
     public function actualiza_autor($aut){
 
+      $this->db->where('id_misc', $this->duplica_registro());
   		if( $this->db->update('miscelanea', $aut))
   			return true;
   		else
@@ -57,6 +61,7 @@
 
     public function actualiza_areas($are){
 
+      $this->db->where('id_misc', $this->duplica_registro());
   		if( $this->db->update('miscelanea', $are))
   			return true;
   		else
@@ -66,12 +71,56 @@
 
     public function actualiza_slide($slide){
 
+      $this->db->where('id_misc', $this->duplica_registro());
       if( $this->db->update('miscelanea', $slide))
         return true;
       else
         return false;
-        
+
     }
+
+    /*
+    * metodo duplica el registro activo
+    * cambia el estado a no activo del
+    * registro antiguo
+    * devuelve el id del nuevo registro
+    */
+    public function duplica_registro() {
+
+      $id = 0;
+      $select = $this->db->select("id_misc, nosotros, objetivo, cita, autor, areas, logo_jpg, logo_png, slide1, cita_slide1, slide2, cita_slide2, slide3, cita_slide3")
+                         ->where("estado", "activo")
+                         ->get("miscelanea");
+
+      if ($select->num_rows()) {
+        $row = $select->row_array();
+        $id_ant = $row['id_misc'];
+        unset($row['id_misc']);
+
+        $insert = $this->db->insert('miscelanea', $row);
+        $id = $this->db->insert_id();
+
+        $this->db->where('id_misc', $id_ant);
+        $this->db->update('miscelanea', array('estado' => "no activo"));
+      }
+
+      return $id;
+
+    }
+
+    public function obtener_historial() {
+
+      $this->db->where("estado", "no activo");
+      $query = $this->db->get('miscelanea');
+
+       if ($query->num_rows() > 0) {
+           return  $query->result();
+       }
+       else {
+           return FALSE;
+       }
+    }
+
    /* public function insertarUnidad($data){
 
         $this->nombre = $data['nombre'];

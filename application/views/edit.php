@@ -31,6 +31,7 @@
             <li><a href="#nosotros" class="smoothScroll" >NOSOTROS</a></li>
             <li><a href="#areas" class="smoothScroll" >AREAS PROTEGIDAS</a></li>
             <li><a href="#contactenos" class="smoothScroll" >CONTACTENOS</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#histmodal">HISTORIAL</a></li>
           </ul>
         </nav>
     </header>
@@ -387,5 +388,6 @@
       </div>
     </div>
     <?= $this->load->view('modals/areas_protegidas', (isset($areas_actualizar)) ? [$areas_actualizar] : "",TRUE) ?>
+    <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
   </body>
 </html>

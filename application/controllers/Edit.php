@@ -6,7 +6,7 @@ class Edit extends CI_Controller {
   public function __construct() {
     parent::__construct();
     if($this->session->userdata('logged_in') == FALSE){
-      redirect('login/index/error_no_autenticar');
+      redirect('login/index/error_no_autenticado');
     }
     $this->load->model('Miscelanea_model');
   }
@@ -16,6 +16,7 @@ class Edit extends CI_Controller {
     $this->load->model('areas_model');
 		$data['areas'] = $this->areas_model->leer_areas();
     $data['info'] = $this->Miscelanea_model->obtenerDatos();
+    $data['historial'] = $this->Miscelanea_model->obtener_historial();
     $this->load->view('edit', $data);
   }
 
