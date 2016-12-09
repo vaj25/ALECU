@@ -172,7 +172,7 @@
         </div>
         <div class="column-b column">
           <span class="social">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falecuanpsanandres%2F&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1912748795615422" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falecuanpsanandres%2F&tabs=timeline&width=260&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1912748795615422" width="260" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
           <span class="social">
             <a class="twitter-timeline width: 20px"  href="https://twitter.com/hashtag/ONGalecu" data-widget-id="805589770218930176"></a>
