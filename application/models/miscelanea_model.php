@@ -121,6 +121,33 @@
        }
     }
 
+    public function obtener_datos_historial($id) {
+
+      $this->db->where("id_misc", $id);
+      $query = $this->db->get('miscelanea');
+
+       if ($query->num_rows() > 0) {
+           return  $query->result();
+       }
+       else {
+           return FALSE;
+       }
+    }
+
+    public function actualizar_estado($id) {
+      $id_ant = $this->obtenerDatos()[0]->id_misc;
+
+      $this->db->where('id_misc', $id_ant);
+      $this->db->update('miscelanea', array('estado' => "no activo"));
+
+      $this->db->where('id_misc', $id);
+      $this->db->update('miscelanea', array('estado' => "activo"));
+    }
+
+    public function eliminar_miscelanea($id) {
+      $this->db->delete('miscelanea', array('id_misc' => $id));
+    }
+
    /* public function insertarUnidad($data){
 
         $this->nombre = $data['nombre'];

@@ -389,5 +389,6 @@
     </div>
     <?= $this->load->view('modals/areas_protegidas', (isset($areas_actualizar)) ? [$areas_actualizar] : "",TRUE) ?>
     <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
+    <?= (isset($aplicar)) ? '<a style="position: fixed; top: 80%; left: 1em;" href="'.base_url("index.php/Edit/actualizarEstado/") . $this->uri->segment(3) .'" class="edit btn btn-success btn-lg">Aplicar</a>' : "" ?>
   </body>
 </html>

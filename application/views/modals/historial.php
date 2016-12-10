@@ -7,14 +7,17 @@
         <h4 class="modal-title">Historial de Cambios</h4>
       </div>
       <div class="modal-body">
-        <form class="" action="index.html" method="post">
+        <form class="" action="<?= base_url("index.php/Edit/eliminarHistorial") ?>" method="post">
           <?php if (count($historial) > 0 ): ?>
             <?php foreach($historial as $htl) : ?>
-              <input type="checkbox" name="" value=""> <?= $htl->fecha_cambio?><br>
+              <input type="checkbox" name="historial" value="<?= $htl->id_misc?>">
+                <a href=" <?= base_url("index.php/Edit/historial/") . $htl->id_misc ?>"><?= $htl->fecha_cambio?></a><br>
             <?php endforeach; ?>
           <?php else :?>
               <h2>No hay registros</h2>
           <?php endif; ?>
+          <br>
+          <button type="submit" class="btn btn-danger">Eliminar</button>
         </form>
       </div>
       <div class="modal-footer">
