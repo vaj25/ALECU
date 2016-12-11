@@ -33,10 +33,6 @@
                 });
               }
 
-              var myLatLng2 = {lat: 13.5272433, lng: -89.2606619};
-              addMark(myLatLng,'area1');
-              addMark(myLatLng2,'area2');
-
               <?php
               $i = 3;
               foreach ($areas as $area){
