@@ -18,7 +18,7 @@ class Areas extends CI_Controller{
 
 		$this->load->model('areas_model');
 		if ( $this->areas_model->insertar_areas($areas) )
-			redirect('Edit');
+			redirect('Areas/index/insert');
 	}
 
 	public function actualizar(){
@@ -32,14 +32,14 @@ class Areas extends CI_Controller{
 
 		$this->load->model('areas_model');
 		if( $this->areas_model->actualiza_areas($id, $areas) )
-			redirect('Edit');
+			redirect('Areas/index/update');
 	}
 
 	public function eliminar(){
 		$idareas = $this->uri->segment(3);
 		$this->load->model('areas_model');
 		if( $this->areas_model->eliminar_areas($idareas) )
-			redirect('Edit');
+			redirect('Areas/index/delete');
 	}
 
 	public function index(){
@@ -47,8 +47,7 @@ class Areas extends CI_Controller{
 		$data['areas'] = $this->areas_model->leer_areas();
 		$data['info'] = $this->Miscelanea_model->obtenerDatos();
 		if( $this->uri->segment(3) != '' ){
-			$id = $this->uri->segment(3);
-			$data['areas_actualizar']	= $this->areas_model->traer_areas($id);
+			$data['msg'] = $this->load->view('mensajes', array('alert' => $this->uri->segment(3), 'controller' => "area"), TRUE);
 		}
 
 		$this->load->helper(array('form'));

@@ -20,6 +20,11 @@
     <script src="<?= base_url("assets/js/main.js")?>"></script>
   </head>
   <body>
+    <?php
+      if ($msg) {
+        echo $msg;
+      }
+    ?>
     <header>
         <div class="menu_bar">
           <a href="#" class="bt-menu"><span class="icon icon-list2"></span>Menu</a>

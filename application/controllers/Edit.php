@@ -17,6 +17,7 @@ class Edit extends CI_Controller {
 		$data['areas'] = $this->areas_model->leer_areas();
     $data['info'] = $this->Miscelanea_model->obtenerDatos();
     $data['historial'] = $this->Miscelanea_model->obtener_historial();
+    $data['msg'] = $this->load->view('mensajes', array('alert' => $this->uri->segment(3)), TRUE);
     $this->load->view('edit', $data);
   }
 
@@ -34,7 +35,7 @@ class Edit extends CI_Controller {
 			'nosotros' => $this->input->post('nosotros')
 			);
 		if( $this->Miscelanea_model->actualiza_nosotros($nos) )
-			redirect('edit');
+			redirect('edit/index/update');
 	}
 
   public function actualizarObjetivo(){
@@ -42,7 +43,7 @@ class Edit extends CI_Controller {
 			'objetivo' => $this->input->post('objetivo')
 			);
 		if( $this->Miscelanea_model->actualiza_objetivo($obj) )
-			redirect('edit');
+			redirect('edit/index/update');
 	}
 
   public function actualizarCita(){
@@ -50,7 +51,7 @@ class Edit extends CI_Controller {
 			'cita' => $this->input->post('cita')
 			);
 		if( $this->Miscelanea_model->actualiza_cita($cit) )
-			redirect('edit');
+			redirect('edit/index/update');
 	}
 
   public function actualizarAutor(){
@@ -58,7 +59,7 @@ class Edit extends CI_Controller {
 			'autor' => $this->input->post('autor')
 			);
 		if( $this->Miscelanea_model->actualiza_autor($aut) )
-			redirect('edit');
+			redirect('edit/index/update');
 	}
 
   public function actualizarArea(){
@@ -66,7 +67,7 @@ class Edit extends CI_Controller {
 			'areas' => $this->input->post('areas')
 			);
 		if( $this->Miscelanea_model->actualiza_areas($are) )
-			redirect('edit');
+			redirect('edit/index/update');
 	}
 
   public function actualizarSlide() {
@@ -108,13 +109,13 @@ class Edit extends CI_Controller {
           break;
       }
   		if( $this->Miscelanea_model->actualiza_slide($sld) )
-  		  redirect('edit');
+  		  redirect('edit/index/update');
     }
   }
 
   public function actualizarEstado() {
     $this->Miscelanea_model->actualizar_estado($this->uri->segment(3));
-    redirect('edit');
+    redirect('edit/index/update');
   }
 
   public function eliminarHistorial() {

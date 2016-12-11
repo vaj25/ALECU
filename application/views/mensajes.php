@@ -40,7 +40,40 @@ if (isset($alert)) {
               break;
           }
           break;
+        case 'area':
+          switch ($alert) {
+            case 'delete':
+              $mensaje = "Se ha eliminado el area correctamente.";
+              break;
+            case 'update':
+              $mensaje = "Se ha actualizado el area correctamente.";
+              break;
+            case 'insert':
+              $mensaje = "Se ha insertado el area correctamente.";
+              break;
+            default:
+            $mensaje = $alert;
+              break;
+          }
+          break;
         default:
+          break;
+      }
+    } else {
+      switch ($alert) {
+        case 'update':
+          $mensaje = "Cambio efectuado satisfactoriamente.";
+          break;
+        case 'error_autenticar':
+          $mensaje = "Lo sentimos. Las credenciales son erroneas.";
+          $tipo = 'danger';
+          break;
+        case 'error_no_autenticado':
+          $mensaje = "Lo sentimos. Aun no ha iniciado sesión.";
+          $tipo = 'danger';
+          break;
+        default:
+        $mensaje = $alert;
           break;
       }
     }

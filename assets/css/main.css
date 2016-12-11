@@ -242,6 +242,12 @@ textarea {
   border-radius: 5px;
 }
 
+.content_alert {
+  position: fixed;
+  top: 64px;
+  right: -1px;
+}
+
 /* RESPONSIVE */
 @media screen and (min-width: 1400px) {
   .fullScreen, .largeScreen {
