@@ -21,7 +21,7 @@
   </head>
   <body>
     <?php
-      if ($msg) {
+      if (isset($msg)) {
         echo $msg;
       }
     ?>
