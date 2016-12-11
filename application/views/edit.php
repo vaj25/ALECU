@@ -312,6 +312,7 @@
         </div>
       </div>
     </div>
+    <div id="map" style="width: 1400px; height: 700px;"></div>
     <div class="fullScreen" id="contactenos">
       <div>
         <div class="column-a column">

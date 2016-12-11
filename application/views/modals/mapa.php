@@ -17,27 +17,44 @@
       <div class="modal-body">
         <div class="contact-form" align="left">
           <!-- Mapa generado con API google maps -->
-
-          <div id="map" style="width: 500px; height: 400px;"></div>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3yClr7vDM4wHpkqhVXFF-BhkHZcCe9e4&callback=initMap" async defer></script>
+          <div id="map" style="width: 1400px; height: 700px;"></div>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3yClr7vDM4wHpkqhVXFF-BhkHZcCe9e4&callback=initMap"></script>
           <script>
-                function initMap() {
-                  var myLatLng = {lat: 13.7272433, lng: -89.3606619};
-                  // Create a map object and specify the DOM element for display.
-                  var map = new google.maps.Map(document.getElementById('map'), {
-                    center: myLatLng,
-                    scrollwheel: false,
-                    zoom: 4
-                  });
+            function initMap() {
+              var myLatLng = {lat: 13.7272433, lng: -89.3606619};
+              // Create a map object and specify the DOM element for display.
+              var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                scrollwheel: true,
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              });
 
-                  // Create a marker and set its position.
-                  var marker = new google.maps.Marker({
-                    map: map,
-                    position: myLatLng,
-                    title: 'Nombre Area'
-                  });
-                }
-              </script>
+              google.maps.event.addListener(map, 'click', function(event) {
+              addMark(event.latLng);
+              });
+
+              function addMark(location,nombre){
+                marker = new google.maps.Marker({
+                  position: location,
+                  map: map,
+                  title: nombre
+                });
+              }
+              var myLatLng2 = {lat: 13.5272433, lng: -89.2606619};
+              addMark(myLatLng,'area1');
+              addMark(myLatLng2,'area2');
+            }
+          </script>
+          <?php
+          /*foreach ($areas_actualizar as $area{
+            echo '<script type="text/javascript" language="JavaScript">'."\n";
+            echo "var myLatLng = {lat: '$area->latitud', lng: '$longitud'};\n";
+            echo "var nombre='$area->nombre';\n";
+            echo "addMark(myLatLng,nombre);\n";
+            echo "<script>";
+          }*/
+          ?>
           <!-- Fin del mapa -->
         </div>
       </div>
