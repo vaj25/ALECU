@@ -290,9 +290,11 @@
               echo $area->extension;
               echo "<br>"?>
             </div>
-            <a href="<?php echo base_url(); ?>index.php/areas/index/<?php echo $area->idareas; ?>">modificar</a>
+            <a href="<?php echo base_url(); ?>index.php/areas/index/<?php echo $area->idareas; ?>">Modificar</a>
             <?php echo "|";?>
-            <a href="<?php echo base_url(); ?>index.php/areas/eliminar/<?php echo $area->idareas; ?>">eliminar</a>
+            <a href="<?php echo base_url(); ?>index.php/areas/eliminar/<?php echo $area->idareas; ?>">Eliminar</a>
+            <?php echo "|";?>
+            <a id="nuevo_mapa" data-toggle="modal" data-target="#mapa-modal">Mapa</a>
           </div>
           <?php endforeach; ?>
         <?php else :?>
@@ -383,7 +385,6 @@
         <div class="column-b column">
           <span class="social">
             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falecuanpsanandres%2F&tabs=timeline&width=260&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1912748795615422" width="260" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          </span>
           <span class="social">
             <a class="twitter-timeline width: 20px"  href="https://twitter.com/hashtag/ONGalecu" data-widget-id="805589770218930176"></a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -393,6 +394,7 @@
       </div>
     </div>
     <?= $this->load->view('modals/areas_protegidas', (isset($areas_actualizar)) ? [$areas_actualizar] : "",TRUE) ?>
+    <?= $this->load->view('modals/mapa', (isset($areas)) ? [$areas] : "",TRUE) ?>
     <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
     <?= (isset($aplicar)) ? '<a style="position: fixed; top: 80%; left: 1em;" href="'.base_url("index.php/Edit/actualizarEstado/") . $this->uri->segment(3) .'" class="edit btn btn-success btn-lg">Aplicar</a>' : "" ?>
   </body>
