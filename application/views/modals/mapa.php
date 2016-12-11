@@ -1,12 +1,3 @@
-<?php
-  if( isset($areas_actualizar) ){
-    $idareas = '<p><input type="hidden" name="idareas" value="'.$this->uri->segment(3).'"></p>';
-    $lat = $areas_actualizar->latitud;
-    $long = $areas_actualizar->longitud;
-    $nom=$areas_actualizar->nombre;
-    $script = '<script type="text/javascript">$(window).load(function(){$("#mapa-modal").modal("show");});</script>';
-  }
-?>
 <div class="modal fade" role="dialog" id="mapa-modal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -41,20 +32,22 @@
                   title: nombre
                 });
               }
+
               var myLatLng2 = {lat: 13.5272433, lng: -89.2606619};
               addMark(myLatLng,'area1');
               addMark(myLatLng2,'area2');
+
+              <?php
+              $i = 3;
+              foreach ($areas as $area){
+                echo "var myLatLng".$i." = {lat: $area->latitud, lng: $area->longitud};\n";
+                echo "var nombre= '$area->nombre';\n";
+                echo "addMark(myLatLng".$i.",nombre);\n";
+                $i++;
+              }
+              ?>
             }
           </script>
-          <?php
-          foreach ($areas_actualizar as $area){
-            echo '<script type="text/javascript" language="JavaScript">'."\n";
-            echo "var myLatLng = {lat: '$area->latitud', lng: '$longitud'};\n";
-            echo "var nombre='$area->nombre';\n";
-            echo "addMark(myLatLng,nombre);\n";
-            echo "<script>";
-          }
-          ?>
           <!-- Fin del mapa -->
         </div>
       </div>
