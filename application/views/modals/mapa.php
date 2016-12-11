@@ -47,13 +47,13 @@
             }
           </script>
           <?php
-          /*foreach ($areas_actualizar as $area{
+          foreach ($areas_actualizar as $area){
             echo '<script type="text/javascript" language="JavaScript">'."\n";
             echo "var myLatLng = {lat: '$area->latitud', lng: '$longitud'};\n";
             echo "var nombre='$area->nombre';\n";
             echo "addMark(myLatLng,nombre);\n";
             echo "<script>";
-          }*/
+          }
           ?>
           <!-- Fin del mapa -->
         </div>
