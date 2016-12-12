@@ -5,6 +5,8 @@
     $descripcion = $areas_actualizar->descripcion;
     $ubicacion = $areas_actualizar->ubicacion;
     $extension = $areas_actualizar->extension;
+    $latitud = $areas_actualizar->latitud;
+    $longitud = $areas_actualizar->longitud;
     $accion = 'actualizar';
     $script = '<script type="text/javascript">$(window).load(function(){$("#anp-modal").modal("show");});</script>';
   }
@@ -14,6 +16,8 @@
     $descripcion = '';
     $ubicacion = '';
     $extension = '';
+    $latitud = '';
+    $longitud = '';
     $accion = 'insertar';
     $script = "";
   }
@@ -36,6 +40,8 @@
             <p><label>Descripcion:</label><br><textarea name="descripcion" class="form-control" cols="50" rows="5"><?php echo $descripcion; ?></textarea></p>
             <p><label>Extension:</label><input type="text" name="extension" class="form-control" value="<?php echo $extension; ?>" ></p>
             <p><label>Ubicacion:</label> <input type="text" name="ubicacion" class="form-control" value="<?php echo $ubicacion; ?>" ></p>
+            <p><label>Latitud:</label> <input type="text" name="latitud" class="form-control" value="<?php echo $latitud; ?>" ></p>
+            <p><label>longitud:</label> <input type="text" name="longitud" class="form-control" value="<?php echo $longitud; ?>" ></p>
             <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
             </fieldset>
           </form>

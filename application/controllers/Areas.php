@@ -13,7 +13,9 @@ class Areas extends CI_Controller{
 			'nombre' => $this->input->post('nombre'),
 			'descripcion' => $this->input->post('descripcion'),
 			'extension'=> $this->input->post('extension'),
-			'ubicacion' => $this->input->post('ubicacion')
+			'ubicacion' => $this->input->post('ubicacion'),
+			'latitud'=> $this->input->post('latitud'),
+			'longitud'=> $this->input->post('longitud')
 			);
 
 		$this->load->model('areas_model');
@@ -26,7 +28,9 @@ class Areas extends CI_Controller{
 			'nombre' => $this->input->post('nombre'),
 			'descripcion' => $this->input->post('descripcion'),
 			'extension'=>$this->input->post('extension'),
-			'ubicacion' => $this->input->post('ubicacion')
+			'ubicacion' => $this->input->post('ubicacion'),
+			'latitud'=> $this->input->post('latitud'),
+			'longitud'=> $this->input->post('longitud')
 			);
 		$id = $this->input->post('idareas');
 

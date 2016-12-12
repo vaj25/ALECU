@@ -100,6 +100,7 @@
         <?php endif; ?>
       </div>
     </div>
+    <div id="map" style="width: 100%; height: 700px;"></div>
     <div class="largeScreen" id="contactenos">
       <div>
         <div class="column-a column">
@@ -185,5 +186,6 @@
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
     <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
     <script src="<?= base_url("assets/js/main.js")?>"></script>
+    <?= $this->load->view('modals/mapa', (isset($areas)) ? [$areas] : "",TRUE) ?>
   </body>
 </html>

@@ -212,7 +212,6 @@
             Editar
           </button>
         </p>
-
         <!-- Modal -->
         <div class="modal fade" id="autorModal" tabindex="-1" role="dialog">
           <div class="modal-dialog">
@@ -293,8 +292,6 @@
             <a href="<?php echo base_url(); ?>index.php/areas/index/<?php echo $area->idareas; ?>">Modificar</a>
             <?php echo "|";?>
             <a href="<?php echo base_url(); ?>index.php/areas/eliminar/<?php echo $area->idareas; ?>">Eliminar</a>
-            <?php echo "|";?>
-            <a id="nuevo_mapa" data-toggle="modal" data-target="#mapa-modal">Mapa</a>
           </div>
           <?php endforeach; ?>
         <?php else :?>
