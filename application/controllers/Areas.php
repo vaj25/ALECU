@@ -52,6 +52,8 @@ class Areas extends CI_Controller{
 		$data['info'] = $this->Miscelanea_model->obtenerDatos();
 		if( $this->uri->segment(3) != '' ){
 			$data['msg'] = $this->load->view('mensajes', array('alert' => $this->uri->segment(3), 'controller' => "area"), TRUE);
+			$id = $this->uri->segment(3);
+ 			$data['areas_actualizar']	= $this->areas_model->traer_areas($id);
 		}
 
 		$this->load->helper(array('form'));
