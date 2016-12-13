@@ -21,10 +21,6 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
               });
 
-              google.maps.event.addListener(map, 'click', function(event) {
-              addMark(event.latLng);
-              });
-
               function addMark(location,nombre){
                 marker = new google.maps.Marker({
                   position: location,
