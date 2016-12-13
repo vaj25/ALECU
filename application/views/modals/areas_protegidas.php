@@ -36,12 +36,12 @@
             <fieldset form="Ingresar_Area" name="IngresarArea">
             <legend>Ingresar Nueva Area</legend>
             <?php echo $idareas; ?>
-            <p><label>Nombre:</label> <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>" ></p>
-            <p><label>Descripcion:</label><br><textarea name="descripcion" class="form-control" cols="50" rows="5"><?php echo $descripcion; ?></textarea></p>
-            <p><label>Extension:</label><input type="text" name="extension" class="form-control" value="<?php echo $extension; ?>" ></p>
-            <p><label>Ubicacion:</label> <input type="text" name="ubicacion" class="form-control" value="<?php echo $ubicacion; ?>" ></p>
-            <p><label>Latitud:</label> <input type="text" name="latitud" class="form-control" value="<?php echo $latitud; ?>" ></p>
-            <p><label>longitud:</label> <input type="text" name="longitud" class="form-control" value="<?php echo $longitud; ?>" ></p>
+            <p><label>Nombre:</label> <input type="text" class="form-control" name="nombre" required="required" value="<?php echo $nombre; ?>" placeholder="Nombre del Area Protegida"></p>
+            <p><label>Descripcion:</label><br><textarea name="descripcion" class="form-control" required="required" cols="50" rows="5"><?php echo $descripcion; ?></textarea></p>
+            <p><label>Extension:</label><input type="number" name="extension" min="0" max="5000" class="form-control" value="<?php echo $extension; ?>"  step ="any" placeholder="Ingresea el tamaño"></p>
+            <p><label>Ubicacion:</label> <input type="text" name="ubicacion" class="form-control" value="<?php echo $ubicacion; ?>" placeholder="Direccion del Area"></p>
+            <p><label>Latitud:</label> <input type="text" name="latitud" class="form-control" value="<?php echo $latitud; ?>" placeholder="Latitud del Area" ></p>
+            <p><label>longitud:</label> <input type="text" name="longitud" class="form-control" value="<?php echo $longitud; ?>" placeholder="Longitud del Area" ></p>
             <p><input type="submit" name="guardar" class="btn btn-primary" value="Guardar" /></p>
             </fieldset>
           </form>

@@ -117,13 +117,16 @@
             $nom = array(
                 'name' => 'nombre',
                 'placeholder' => 'Escribe Nombre',
-                'class' => "form-control"
+                'class' => "form-control",
+                "required" => ""
             );
 
             $email = array(
                 'name' => 'email',
                 'placeholder' => 'Escriba su Email',
-                'class' => "form-control"
+                'class' => "form-control",
+                'type' => "email",
+                "required" => ""
             );
 
             $asunto = array(
@@ -135,7 +138,8 @@
             $mensaje = array(
               'name'        => 'msj',
               'placeholder' => 'Escriba el Mensaje',
-              'class'       => 'form-control'
+              'class'       => 'form-control',
+              "required" => ""
             );
 
             echo form_open("/Welcome/EnviarCorreo", $atributos);
