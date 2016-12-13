@@ -37,6 +37,7 @@
             <li><a href="#areas" class="smoothScroll" >AREAS PROTEGIDAS</a></li>
             <li><a href="#contactenos" class="smoothScroll" >CONTACTENOS</a></li>
             <li><a href="#" data-toggle="modal" data-target="#histmodal">HISTORIAL</a></li>
+            <li><a href="<?= base_url("/index.php/Login/logout")?>"><span class="icon icon-switch"></span></a></li>
           </ul>
         </nav>
     </header>

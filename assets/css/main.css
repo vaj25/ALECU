@@ -297,4 +297,8 @@ textarea {
   .box {
     width: 90%;
   }
+
+  .box-content {
+    height: 20em;
+  }
 }

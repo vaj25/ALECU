@@ -20,3 +20,7 @@
 .icon-list2:before {
 	content: "\e9bd";
 }
+
+.icon-switch:before {
+  content: "\e9b6";
+}

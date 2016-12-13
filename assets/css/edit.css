@@ -17,3 +17,17 @@
   left: 70%;
   margin: 1em;
 }
+
+header nav ul li:last-child {
+  float: right;
+  font-size: 1.5em;
+  top: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  header nav ul li:last-child {
+    float: none;
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+}
