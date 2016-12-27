@@ -20,8 +20,14 @@
 
 header nav ul li:last-child {
   float: right;
-  font-size: 1.5em;
-  top: 18px;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.form-user {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 1em;
 }
 
 @media screen and (max-width: 767px) {

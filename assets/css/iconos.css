@@ -24,3 +24,7 @@
 .icon-switch:before {
   content: "\e9b6";
 }
+
+.icon-user:before {
+  content: "\e971";
+}
