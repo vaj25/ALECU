@@ -383,15 +383,36 @@
             echo form_submit('','Enviar', $button);
             echo form_close();
           ?>
+          <br><br><br>
+          <script>
+            !function(d,s,id){
+              var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?
+              'http':'https';if(!d.getElementById(id))
+              {
+                js=d.createElement(s);
+                js.id=id;
+                js.src=p+"://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js,fjs);
+              }
+            }(document,"script","twitter-wjs");
+          </script>
+          <a class="twitter-timeline" data-width="550" data-height="500" data-theme="dark" href="https://twitter.com/ALECU2007">Tweets Liked by @TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <div class="column-b column">
           <span class="social">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falecuanpsanandres%2F&tabs=timeline&width=260&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1912748795615422" width="260" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          <span class="social">
-            <a class="twitter-timeline width: 20px"  href="https://twitter.com/hashtag/ONGalecu" data-widget-id="805589770218930176"></a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            <a class="twitter-timeline" data-width="260" data-height="500" data-theme="dark" href="https://twitter.com/ONGalecu/likes">Tweets Liked by @TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </span>
+            <div id="fb-root"></div>
+            <script>
+              (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=1912748795615422";
+                  fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            </script>
+          <div class="fb-comments" data-href="https://www.facebook.com/alecuanpsanandres/?fref=ts" data-numposts="10"></div>
+          <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Falecuanpsanandres%2F%3Ffref%3Dts&width=450&height=80&layout=standard&size=small&show_faces=true&appId=1912748795615422" width="600" height="200" style="border:none;overflow:hidden" data-size="large" scrolling="no" frameborder="0" allowTransparency="true" data-show-faces="true"></iframe>
+        </span>
         </div>
       </div>
     </div>
