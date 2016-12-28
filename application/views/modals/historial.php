@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
         <form class="" action="<?= base_url("index.php/Edit/eliminarHistorial") ?>" method="post">
-          <?php if (count($historial) > 0 ): ?>
+          <?php if (isset($historial)): ?>
             <?php foreach($historial as $htl) : ?>
               <input type="checkbox" name="historial" value="<?= $htl->id_misc?>">
                 <a href=" <?= base_url("index.php/Edit/historial/") . $htl->id_misc ?>"><?= $htl->fecha_cambio?></a><br>

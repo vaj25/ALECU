@@ -15,12 +15,17 @@ class User extends CI_Controller {
     $this->load->view('user_view', $this->session->userdata('logged_in'));
   }
 
+  public function Users() {
+    $this->load->view('user_view', $this->session->userdata('logged_in'));
+  }
+
   public function RecibirDatos() {
     $data;
     if ('nombre'== $this->input->post('tipo')) {
       $data = array(
         'nombre' => $this->input->post('nombre'),
         'user' => $this->input->post('user'),
+        'pass' => $this->input->post('pass'),
       );
       if( $this->User_model->modificarNombre($data) )
         redirect("/User/index/update");
@@ -32,7 +37,6 @@ class User extends CI_Controller {
       );
       if( $this->User_model->modificarPass($data) )
         redirect("/User/index/update");
-      var_dump($data);
     }
   }
 }

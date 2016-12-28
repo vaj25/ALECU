@@ -18,10 +18,10 @@
         <nav>
           <ul>
             <li><div id="logo"><img src="<?= base_url("assets/image/logo_01.png"); ?>"  alt="logo alecu"></div></li>
-            <li><a href="#inicio" class="smoothScroll" >INICIO</a></li>
-            <li><a href="#nosotros" class="smoothScroll" >NOSOTROS</a></li>
-            <li><a href="#areas" class="smoothScroll" >AREAS PROTEGIDAS</a></li>
-            <li><a href="#contactenos" class="smoothScroll" >CONTACTENOS</a></li>
+            <li><a href="<?= base_url("/index.php/Edit/#inicio")?>"  >INICIO</a></li>
+            <li><a href="<?= base_url("/index.php/Edit/#nosotros")?>"  >NOSOTROS</a></li>
+            <li><a href="<?= base_url("/index.php/Edit/#areas")?>"  >AREAS PROTEGIDAS</a></li>
+            <li><a href="<?= base_url("/index.php/Edit/#contactenos")?>"  >CONTACTENOS</a></li>
             <li><a href="#" data-toggle="modal" data-target="#histmodal">HISTORIAL</a></li>
             <li>
               <a href="<?= base_url("/index.php/User/")?>"><span class="icon icon-user"></span></a>
@@ -42,13 +42,13 @@
             <input type="text" class="form-control" id="nombre-usuario" name="nombre" required="required" value="<?= $nombre_completo?>" placeholder="Nombre del Usuario" disabled>
             <a href="#" id="edit-nombre">editar</a>
           </div>
+          <div class="col-lg-10" id="pass_conf">
+
+          </div>
           <div class='col-lg-10'>
             <label>Password:</label>
             <input type="password" id="pass-usuario" name="pass_o" class="form-control" required="required" value="holamundo" placeholder="Contraseña" disabled>
             <a href="#" id="edit-pass">editar</a>
-          </div>
-          <div class="col-lg-10" id="pass_conf">
-
           </div>
           <div class='col-lg-10'>
             <input type="hidden" id="tipo" name="tipo" value="">
@@ -56,7 +56,11 @@
           </div>
         </form>
       </div>
+      <?php if ("admin.alecu" == $usuario): ?>
+        <a href="<?= base_url("/index.php/User/Users")?>">Configurar Usuarios</a>
+      <?php endif; ?>
     </div>
+    <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
     <script src="<?= base_url("vendor/twbs/bootstrap/dist/js/bootstrap.min.js")?>"></script>
     <script src="<?= base_url("assets/js/edit.js")?>"></script>

@@ -48,7 +48,7 @@
     }
 
     public function modificarNombre($data) {
-      if (TRUE) {
+      if ($this->validarPass($data['user'], $data['pass'])) {
         $this->db->where('username', $data['user'])
                  ->set('name', $data['nombre']);
         $this->db->update('usuario');
