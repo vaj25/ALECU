@@ -57,6 +57,16 @@
       return FALSE;
     }
 
+    public function modificarNombreUsers($data) {
+      if ($this->validarPass($data['user_admin'], $data['pass'])) {
+        $this->db->where('username', $data['user'])
+                 ->set('name', $data['nombre']);
+        $this->db->update('usuario');
+        return TRUE;
+      }
+      return FALSE;
+    }
+
     public function modificarPass($data) {
       if ($this->validarPass($data['user'], $data['old_pass'], $data['new_pass'])) {
         $this->db->where('username', $data['user'])
@@ -68,12 +78,33 @@
       return FALSE;
     }
 
-    public function obtenerUsuarios() {
+    public function modificarPassUsers($data) {
+      if ($this->validarPass($data['user_admin'], $data['pass'])) {
+        $this->db->where('username', $data['user'])
+                 ->set('password', MD5($data['new_pass']));
+        $this->db->update('usuario');
+        var_dump($data);
+        return TRUE;
+      }
+      return FALSE;
+    }
 
+    public function obtenerUsuarios() {
+      $query = $this->db->get('usuario');
+      if ($query->num_rows() > 0) {
+        return $query->result();
+      } else {
+        return FALSE;
+      }
     }
 
     public function EliminarUsuario($user) {
+      $this->db->where('username', $user);
 
+  		if( $this->db->delete('usuario') )
+  			return true;
+  		else
+  			return false;
     }
 
     public function validarPass($user, $pass, $n_pass = FALSE) {

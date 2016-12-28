@@ -28,3 +28,11 @@
 .icon-user:before {
   content: "\e971";
 }
+
+.icon-pencil:before {
+  content: "\e905";
+}
+
+.icon-bin:before {
+  content: "\e9ac";
+}
