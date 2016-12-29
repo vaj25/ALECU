@@ -47,6 +47,13 @@
        }
     }
 
+    public function insertarUsers($user){
+  		if ( $this->db->insert('usuario', $user) )
+  			return true;
+  		else
+  			return false;
+  	}
+
     public function modificarNombre($data) {
       if ($this->validarPass($data['user'], $data['pass'])) {
         $this->db->where('username', $data['user'])

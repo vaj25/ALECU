@@ -60,6 +60,16 @@ class User extends CI_Controller {
       );
       if( $this->User_model->modificarPassUsers($data) )
         redirect("/User/Users/update");
+    } else if ('new'== $this->input->post('tipo')) {
+      $data = array(
+        'name' => $this->input->post('nombre'),
+        'password' => MD5($this->input->post('pass_o')),
+        'username' => $this->input->post('user'),
+      );
+      if( $this->User_model->insertarUsers($data) )
+        redirect("/User/Users/new");
+    } elseif ('mod'== $this->input->post('tipo')) {
+      redirect("/User/Users/error");
     }
   }
 

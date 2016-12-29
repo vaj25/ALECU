@@ -35,11 +35,11 @@
         <form name="" action="UpdateUser" autocomplete="on" method="post">
           <div class='col-lg-10'>
             <label>Username:</label><br>
-            <input type="text" class="form-control" name="user" required="required" placeholder="Username" readonly>
+            <input type="text" class="form-control" name="user" required="required" placeholder="Username" >
           </div>
           <div class='col-lg-10'>
             <label>Nombre:</label>
-            <input type="text" class="form-control" id="nombre-usuario" name="nombre" required="required" placeholder="Nombre del Usuario" disabled>
+            <input type="text" class="form-control" id="nombre-usuario" name="nombre" required="required" placeholder="Nombre del Usuario" >
             <a href="#" id="edit-nombre">editar</a>
           </div>
           <div class="col-lg-10" id="pass_conf">
@@ -47,11 +47,11 @@
           </div>
           <div class='col-lg-10'>
             <label>Password:</label>
-            <input type="password" id="pass-usuario" name="pass_o" class="form-control" required="required" placeholder="Contraseña" disabled>
+            <input type="password" id="pass-usuario" name="pass_o" class="form-control" required="required" placeholder="Contraseña" >
             <a href="#" id="edit-pass">editar</a>
           </div>
           <div class='col-lg-10'>
-            <input type="hidden" id="tipo" name="tipo" value="">
+            <input type="hidden" id="tipo" name="tipo" value="new">
             <input type="submit" name="guardar" class="btn btn-primary" value="Guardar" />
           </div>
         </form>
@@ -71,7 +71,7 @@
               <td><?= $i?></td>
               <td><?= $dato->username?></td>
               <td><?= $dato->name?></td>
-              <td><a href="#" class="icon icon-pencil" onclick="fill_form(['user', 'nombre', 'pass_o'], ['<?= $dato->username?>', '<?= $dato->name?>', 'holamundo'])"></a></td>
+              <td><a href="#" class="icon icon-pencil" onclick="fill_form(['user', 'nombre', 'pass_o', 'guardar', 'tipo'], ['<?= $dato->username?>', '<?= $dato->name?>', 'holamundo', 'Modificar', 'mod'], 'input', ['readonly', 'disabled', 'disabled'])"></a></td>
               <td><a href="<?= base_url("/index.php/User/DeleteUser/") . $dato->username?>" class="icon icon-bin"></a></td>
             </tr>
             <?php $i++ ?>
