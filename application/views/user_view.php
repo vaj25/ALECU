@@ -33,36 +33,38 @@
     <div class="fullScreen">
       <div class="form-user">
         <form name="Ingresar_Area" action="RecibirDatos" autocomplete="on" method="post">
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Username:</label><br>
             <input type="text" class="form-control" name="user" required="required" value="<?= $usuario?>" placeholder="Username" readonly>
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Nombre:</label>
             <input type="text" class="form-control" id="nombre-usuario" name="nombre" required="required" value="<?= $nombre_completo?>" placeholder="Nombre del Usuario" disabled>
             <a href="#" id="edit-nombre">editar</a>
           </div>
-          <div class="col-lg-10" id="pass_conf">
+          <div class="form-group" id="pass_conf">
 
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Password:</label>
             <input type="password" id="pass-usuario" name="pass_o" class="form-control" required="required" value="holamundo" placeholder="Contraseña" disabled>
             <a href="#" id="edit-pass">editar</a>
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <input type="hidden" id="tipo" name="tipo" value="">
             <input type="submit" name="guardar" class="btn btn-primary" value="Guardar" />
           </div>
         </form>
       </div>
       <?php if ("admin.alecu" == $usuario): ?>
-        <a href="<?= base_url("/index.php/User/Users")?>">Configurar Usuarios</a>
+        <a href="<?= base_url("/index.php/User/Users")?>" style="margin-left: 2em;" class="btn btn-success">Configurar Usuarios</a>
       <?php endif; ?>
     </div>
     <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
+    <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
     <script src="<?= base_url("vendor/twbs/bootstrap/dist/js/bootstrap.min.js")?>"></script>
     <script src="<?= base_url("assets/js/edit.js")?>"></script>
+    <script src="<?= base_url("assets/js/main.js")?>"></script>
   </body>
 </html>

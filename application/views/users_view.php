@@ -33,31 +33,31 @@
     <div class="fullScreen">
       <div class="form-user">
         <form name="" action="UpdateUser" autocomplete="on" method="post">
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Username:</label><br>
             <input type="text" class="form-control" name="user" required="required" placeholder="Username" >
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Nombre:</label>
             <input type="text" class="form-control" id="nombre-usuario" name="nombre" required="required" placeholder="Nombre del Usuario" >
             <a href="#" id="edit-nombre">editar</a>
           </div>
-          <div class="col-lg-10" id="pass_conf">
+          <div class="form-group" id="pass_conf">
 
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <label>Password:</label>
             <input type="password" id="pass-usuario" name="pass_o" class="form-control" required="required" placeholder="Contraseña" >
             <a href="#" id="edit-pass">editar</a>
           </div>
-          <div class='col-lg-10'>
+          <div class='form-group'>
             <input type="hidden" id="tipo" name="tipo" value="new">
             <input type="submit" name="guardar" class="btn btn-primary" value="Guardar" />
           </div>
         </form>
       </div>
-      <div class="table-responsive">
-        <table class="table">
+      <div class="content-table table-responsive">
+        <table class="table table-hover">
           <tr>
             <th>#</th>
             <th>User</th>
@@ -82,7 +82,9 @@
     <?= $this->load->view('modals/historial', (isset($historial)) ? [$historial] : "", TRUE) ?>
     <script src="<?= base_url("assets/js/jquery-1.11.3.min.js")?>"></script>
     <script src="<?= base_url("assets/js/fill-form.js")?>"></script>
+    <script src="<?= base_url("assets/js/smooth-scroll.js")?>"></script>
     <script src="<?= base_url("vendor/twbs/bootstrap/dist/js/bootstrap.min.js")?>"></script>
     <script src="<?= base_url("assets/js/edit.js")?>"></script>
+    <script src="<?= base_url("assets/js/main.js")?>"></script>
   </body>
 </html>
